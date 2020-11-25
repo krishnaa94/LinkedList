@@ -2,7 +2,6 @@
 
 linkedList mylist;
 
-void clear();
 void addition(int option);
 void deletion(int option);
 void display(int option);
@@ -18,12 +17,14 @@ int main()
 
     while(1)
     {
-        clear();
+        system("cls");
         int operation;
 
-        cout<<string(119,'#')<<endl;
-        cout<<string(50,'#')<<"    LINKED LIST    "<<string(50,'#')<<endl;
-        cout<<string(119,'#')<<endl;
+        cout<<string(120,'#')<<endl;
+        cout<<string(120,'#')<<endl;
+        cout<<string(51,'#')<<"    LINKED LIST    "<<string(50,'#')<<endl;
+        cout<<string(120,'#')<<endl;
+        cout<<string(120,'#')<<endl;
 
         cout<<string(3,'\n');
         cout<<"CHOSSE OPERATION:"<<endl;
@@ -38,8 +39,10 @@ int main()
         switch (operation)
         {
             int option;
-        case 1: cout<<string(3,'\n');
-                cout<<string(50,'#')<<"    INSERTION IN LINKED LIST    "<<string(50,'#')<<endl;
+        case 1: system("cls");
+                cout<<string(120,'#')<<endl;
+                cout<<string(44,'#')<<"    INSERTION IN LINKED LIST    "<<string(44,'#')<<endl;
+                cout<<string(120,'#')<<endl;
                 cout<<string(3,'\n');
                 cout<<"CHOSSE OPERATION:"<<endl;
                 cout<<"\t\t 1 ---------- INSERTION IN BEGGINING OF LIST"<<endl;
@@ -47,9 +50,12 @@ int main()
                 cout<<"\t\t 3 ---------- INSERTION IN BETWEEN OF LIST"<<endl;
                 cin>>option;
                 addition(option);
+                system("pause")
             break;
-        case 2: cout<<string(3,'\n');
-                cout<<string(50,'#')<<"    DELETION IN LINKED LIST    "<<string(50,'#')<<endl;
+        case 2: system("cls");
+                cout<<string(120,'#')<<endl;
+                cout<<string(45,'#')<<"    DELETION IN LINKED LIST    "<<string(45,'#')<<endl;
+                cout<<string(120,'#')<<endl;
                 cout<<string(3,'\n');
                 cout<<"CHOSSE OPERATION:"<<endl;
                 cout<<"\t\t 1 ---------- DELETION FROM BEGGINING OF LIST"<<endl;
@@ -57,40 +63,50 @@ int main()
                 cout<<"\t\t 3 ---------- DELETION FROM IN BETWEEN OF LIST"<<endl;
                 cin>>option;
                 deletion(option);
+                system("pause");
             break;
-        case 3: cout<<string(3,'\n');
-                cout<<string(50,'#')<<"   DISPLAY LINKED LIST    "<<string(50,'#')<<endl;
+        case 3: system("cls");
+                cout<<string(120,'#')<<endl;
+                cout<<string(47,'#')<<"   DISPLAY LINKED LIST    "<<string(48,'#')<<endl;
+                cout<<string(120,'#')<<endl;
                 cout<<string(3,'\n');
                 cout<<"CHOSSE OPERATION:"<<endl;
                 cout<<"\t\t 1 ---------- DISPLAY WHOLE LIST"<<endl;
                 cout<<"\t\t 2 ---------- DISPLAY DATA AT CERTAIN POSITION"<<endl;
                 cin>>option;
                 display(option);
+                system("pause");
             break;
-        case 4: cout<<string(3,'\n');
-                cout<<string(50,'#')<<"   FIND DATA IN LINKED LIST    "<<string(50,'#')<<endl;
+        case 4: system("cls");
+                cout<<string(120,'#')<<endl;
+                cout<<string(43,'#')<<"   FIND DATA IN LINKED LIST    "<<string(43,'#')<<endl;
+                cout<<string(120,'#')<<endl;
                 cout<<string(3,'\n');
                 find();
+                system("pause");
             break;
-        case 5: cout<<string(3,'\n');
-                cout<<string(50,'#')<<"   SHOW SIZE OF LIST    "<<string(50,'#')<<endl;
+        case 5: system("cls");
+                cout<<string(120,'#')<<endl;
+                cout<<string(48,'#')<<"   SHOW SIZE OF LIST    "<<string(48,'#')<<endl;
+                cout<<string(120,'#')<<endl;
                 cout<<string(3,'\n');
-                cout<<" SIZE IS "<<mylist.getsize();
+                cout<<" SIZE OF THE LIST IS "<<mylist.getsize()<<endl;
+                system("pause");
             break;
         case 6: return 0;
             break;
         
-        default: cout<<"wrong Operation choosen, try again";
+        default:system("cls");
+                cout<<string(120,'#')<<endl;
+                cout<<string(50,'#')<<"..............   SORRY    ..........."<<string(50,'#')<<endl;
+                cout<<string(120,'#')<<endl;
+                cout<<"wrong Operation choosen, try again";
+                system("pause");
             break;
         }
     }
 
     return 0;
-}
-
-void clear()
-{
-    cout<<string(10,'\n');
 }
 
 void addition(int option)

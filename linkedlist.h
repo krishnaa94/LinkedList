@@ -49,7 +49,8 @@ linkedList::linkedList()
     head = NULL;
     tail = NULL;
     size = 0;
-    cout<<"list initailised"<<endl;
+    cout<<"Program initailised press Enter to proceed.........."<<endl;
+    system("pause");
 }
 
 //------------------------------------------------------   constructors   -------------------------------------
@@ -88,6 +89,7 @@ void linkedList::prepend(int data)
         head = n; 
     }
     size++;
+    cout<<"Insertion succesfull !!"<<endl;
 }
 
 void linkedList::append(int data)
@@ -105,6 +107,7 @@ void linkedList::append(int data)
         tail = n; 
     }
     size++;
+    cout<<"Insertion succesfull !!"<<endl;
 }
 
 void linkedList::addatpos(int data, int pos)
@@ -145,6 +148,8 @@ void linkedList::displaylist()
     Node *temp = head;
     if(!temp)
     cout<<"List is empty"<<endl;
+    else 
+    cout<<"\t LIST   !!"<<endl;
     while(temp!=NULL)
     {
         cout<<temp->data<<" --> ";
@@ -159,7 +164,7 @@ void linkedList::displaypos(int pos)
     for (int i = 1; i < pos; i++)
             temp = temp->next;
         
-    cout<<"data at"<<pos<<"th position is "<<temp->data<<endl;
+    cout<<"Data at"<<pos<<"th position is "<<temp->data<<endl;
 }
 
 //------------------------------------------------------ delete data -------------------------------------
@@ -177,6 +182,7 @@ void linkedList::displaypos(int pos)
         delete temp;
         size--;
     }
+    cout<<"Deletion succesfull !!"<<endl;
  }
 
 void linkedList::removelast()
@@ -203,6 +209,7 @@ void linkedList::removelast()
         delete curr;
         size--;
     }
+    cout<<"Deletion succesfull !!"<<endl;
 }
 
 void linkedList::removePos(int pos)
